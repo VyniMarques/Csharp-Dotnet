@@ -8,6 +8,7 @@ public class Program
     {
         Console.WriteLine("==== Calculadora Simples ====");
 
+        // Iniciando Loop
         bool running = true;
         while (running)
         {
@@ -51,29 +52,33 @@ public class Program
 
 
             double result = 0;
+            bool show = true;
 
-            if (op == 1)
+            switch (op)
             {
-                result = number1 + number2;
+                case 1:
+                    result = number1 + number2;
+                    break;
+                case 2:
+                    result = number1 + number2;
+                    break;
+                case 3:
+                    result = number1 + number2;
+                    break;
+                case 4:
+                    result = number1 + number2;
+                    break;
+                default:
+                    Console.WriteLine("Fim do Programa!");
+                    show = false;
+                    break;
+
             }
-            else if (op == 2)
+
+            if (show == true)
             {
-                result = number1 - number2;
+                Console.WriteLine("Resultado =  " + result + "\n");
             }
-            else if (op == 3)
-            {
-                result = number1 * number2;
-            }
-            else if (op == 4)
-            {
-                result = number1 / number2;
-            }
-            else
-            {
-                Console.WriteLine("Fim do Programa!");
-                break;
-            }
-            Console.WriteLine("Resultado =  " + result + "\n");
 
             // Continuando no loop
             Console.WriteLine("Deseja continuar? (s/n)");
